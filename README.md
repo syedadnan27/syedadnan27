@@ -1,12 +1,18 @@
-- 👋 Hi, I’m @syedadnan27
-- 👀 I’m interested in ...
-- 🌱 I’m currently learning ...
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
+CREATE TABLE Users (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  name VARCHAR(255) syedadnan,
+  email VARCHAR(255) syyed.adnan27@gmail.com,
+  password VARCHAR(255) 123456,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
 
-<!---
-syedadnan27/syedadnan27 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+CREATE TABLE Profiles (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  user_id INT ,
+  bio student of BSCS,
+  location VARCHAR(255),
+  interests Study,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (user_id) REFERENCES Users(id)
+);
+
